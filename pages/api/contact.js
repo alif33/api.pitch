@@ -1,7 +1,10 @@
 const nc = require('next-connect');
+const cors = require('cors');
 const { db } = require('../../utils/db');
 
+
 const handler = nc();
+handler.use(cors());
 
 handler.post(async (req, res) => {
   try {
